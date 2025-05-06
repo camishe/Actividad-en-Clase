@@ -1,0 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        Cabello cabello = new Cabello();
+        ProductoCabello shampoo = new ProductoCabello("Shampoo Herbal", "Limpieza");
+        ProductoCabello mascarilla = new ProductoCabello("Mascarilla Reparadora", "Nutricion");
+
+        RutinaCuidadoCabello rutina = new RutinaCuidadoCabello(cabello);
+        rutina.agregarProducto1(shampoo);
+        rutina.agregarProducto2(mascarilla);
+
+        System.out.println("Estado inicial del cabello: " + cabello.getEstado());
+        rutina.ejecutarRutina();
+        System.out.println("Estado final del cabello: " + cabello.getEstado());
+    }
+}
