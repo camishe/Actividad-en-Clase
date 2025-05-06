@@ -1,0 +1,41 @@
+public class RutinaCuidadoCabello {
+    private Cabello cabello;
+    private ProductoCabello producto1;
+    private ProductoCabello producto2;
+
+    public RutinaCuidadoCabello(Cabello cabello) {
+        this.cabello = cabello;
+    }
+
+    public void agregarProducto1(ProductoCabello producto) {
+        this.producto1 = producto;
+    }
+
+    public void agregarProducto2(ProductoCabello producto) {
+        this.producto2 = producto;
+    }
+
+    public ProductoCabello obtenerProducto1() {
+        return producto1;
+    }
+
+    public ProductoCabello obtenerProducto2() {
+        return producto2;
+    }
+
+    public void ejecutarRutina() {
+        cabello.mojar();
+
+        if (producto1 != null) {
+            producto1.aplicar(cabello);
+        }
+
+        if (producto2 != null) {
+            producto2.aplicar(cabello);
+        }
+
+        cabello.enjuagar();
+        cabello.desenredar();
+        cabello.secar();
+    }
+}
